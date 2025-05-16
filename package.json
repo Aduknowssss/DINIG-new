@@ -3,13 +3,17 @@
   "license": "0BSD",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://github.com/onlyRigel/Dinig-New-V2",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "predeploy": "expo export:web",
+    "deploy": "gh-pages -d web-build"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~4.0.1",
     "@expo/vector-icons": "^14.0.4",
     "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-native-clipboard/clipboard": "^1.16.2",
@@ -21,19 +25,23 @@
     "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "expo": "~52.0.40",
+    "expo-av": "~15.0.2",
     "expo-clipboard": "~7.0.1",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-native": "0.76.7",
     "react-native-dotenv": "^3.4.11",
     "react-native-gesture-handler": "^2.24.0",
     "react-native-reanimated": "~3.16.1",
     "react-native-safe-area-context": "^5.3.0",
-    "react-native-screens": "^4.9.2"
+    "react-native-screens": "^4.9.2",
+    "react-native-web": "~0.19.13"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@react-native-community/cli": "^18.0.0"
   },
-  "private": true
+  "private": true,
+  "packageManager": "yarn@4.8.1+sha512.bc946f2a022d7a1a38adfc15b36a66a3807a67629789496c3714dd1703d2e6c6b1c69ff9ec3b43141ac7a1dd853b7685638eb0074300386a59c18df351ef8ff6"
 }
